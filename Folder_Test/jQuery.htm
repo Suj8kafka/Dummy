@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Animation with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <style>
+        .box { 
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+    </style>
+    <div class="box"></div>
+
+    <script>
+        $(document).ready(function(){ 
+            $('.box').click(function(){ 
+                $(this).animate({ 
+                    width: '200px', 
+                    height: '200px',
+                    backgroundColor: 'blue' 
+                }, 1000 ,'swing', function(){ 
+                    //Animation complete callback
+                    $(this).animate({ 
+                        width:'100px',
+                        height:'100px',
+                        backgroundColor:'red'
+                    }, 1000, 'linear')
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
