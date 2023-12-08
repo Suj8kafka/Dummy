@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery only </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <script>
+        $(document).ready(function(){ 
+            $(".hide").click(function(){ 
+                $("p").hide()
+            })
+            $(".show").click(function(){ 
+                $("p").show()
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>This is a test and it can hide if the button is clicked</p>
+    <button class="hide">Hide</button>
+    <button class="show">Show</button> <br>
+     
+     <div class="but">1.0</div>
+<style>
+    .but{ 
+        top: 50%;
+        right: 50%;
+        position: absolute;
+        background-color:  rgba(157, 66, 66, 0.433);
+        border: .2rem solid red;
+        border-radius: 10%;
+        width: 5rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        transition: .2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+    .but:hover{ 
+        color: rgb(255, 255, 255) ;
+        background-color: rgba(230, 0, 0, 0.242);
+        border: solid rgba(255, 0, 0, 0.233);
+    }
+    body{ 
+        background-color: rgb(34, 34, 34);
+    }
+    p{ 
+        color: white;
+    }
+</style>
+    </body>
+
+</html>
